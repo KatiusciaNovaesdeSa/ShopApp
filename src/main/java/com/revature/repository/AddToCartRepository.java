@@ -18,7 +18,7 @@ public interface AddToCartRepository extends JpaRepository<AddtoCart, Long> {
 	
 		//getCartByuserId
 
-	/*	//add cart by userId and cartId	
+		//add cart by userId and cartId	
 		@Query("select addCart from AddtoCart addCart where addCart.user_id=user_id")
 		List<AddtoCart> getCartByuserId(@Param("user_id")Long user_id);
 		
@@ -27,7 +27,7 @@ public interface AddToCartRepository extends JpaRepository<AddtoCart, Long> {
 		@Query("select addCart from AddtoCart addCart where addCart.product.id= product_id and addCart.user_id= user_id")
 		Optional<AddtoCart> getCartByProductIdAnduserId(@Param("user_id")Long user_id,@Param("product_id")String productId);
 		
-		*/
+	
 		
 	/*	@Modifying
 	    @Transactional

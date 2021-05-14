@@ -24,7 +24,7 @@ import com.revature.model.Products;
 
 @RestController
 @CrossOrigin(origins="*")
-@RequestMapping(value= "product")
+@RequestMapping(value= "/product")
 public class ProductController {
 	
 	@Autowired
@@ -39,6 +39,8 @@ public class ProductController {
 	public List<Category> getAllCategory(){
 		return ProductServices.getAllCategory();
 	}
+	
+	
 	
 //	@RequestMapping("getProductsByCategory")
 //	public List<Products> getProductsByCategory(@RequestBody HashMap<String,String> request){

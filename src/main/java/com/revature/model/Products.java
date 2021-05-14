@@ -5,12 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity(name = "products")
 public class Products {
 	
 	@Id
-	@Column(name = "id")
+	@Column(name = "product_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	long id;
 	
@@ -23,8 +25,8 @@ public class Products {
 	@Column(name= "author")
 	String author;
 	
-	
-	@Column(name= "category_id")
+	@JoinColumn(name = "id")
+//	@Column(name= "category_id")
 	String category_id;
 	
 	

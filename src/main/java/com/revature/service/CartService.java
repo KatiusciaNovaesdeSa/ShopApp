@@ -12,8 +12,8 @@ import com.revature.model.Products;
 public interface CartService {
 	
 	//ADD
-//	List<AddtoCart> addCartbyUserIdAndProductId(String productId,long userId, int qty, double price) throws Exception;
-//	List<AddtoCart> getCartByUserId(long userId);
+	List<AddtoCart> addCartbyUserIdAndProductId(String productId,long userId, int qty, double price) throws Exception;
+	List<AddtoCart> getCartByUserId(long userId);
 	
 	//WRONG QUERY -NEED TO FIX in AddCartRepo
 //	List<AddtoCart> removeCartByUserId(long cartId,long userId);

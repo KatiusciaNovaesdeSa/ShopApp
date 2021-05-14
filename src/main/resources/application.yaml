@@ -1,15 +1,15 @@
   
 spring:
   datasource:
-    url: jdbc:postgresql://rev-canada-training.cgz20kzsu2zt.us-east-2.rds.amazonaws.com:5432/shopdb
-    username: shopuser
-    password: password
+    url: jdbc:postgresql://rev-can-training.czbbfxriy83g.ca-central-1.rds.amazonaws.com:5432/storedb
+    username: storeuser
+    password: Passw0rd
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
       
   security:
    jwt:

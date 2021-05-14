@@ -26,7 +26,7 @@ public class AddToCartController {
 	
 // AFTER FIX QUERIES UNCOMMENT THOSE	
   
-  /*@RequestMapping("addProduct")
+  @RequestMapping("addProduct")
 	public ResponseEntity<?> addCartwithProduct(@RequestBody HashMap<String,String> addCartRequest) {
 		try {
 			String keys[] = {"productId","userId","qty","price"};
@@ -45,7 +45,7 @@ public class AddToCartController {
 		}
 	}
 	
-	*/
+	
 	
 	
 	

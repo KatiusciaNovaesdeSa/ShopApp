@@ -1,10 +1,16 @@
 package com.revature.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity(name = "orders")
 public class Order {
@@ -18,8 +24,9 @@ public class Order {
 	@Column(name= "prod_order_id")
 	String prod_order_id;
 	
-	@Column(name= "product_id")
-	long products_id;
+	@OneToMany(fetch = FetchType.LAZY)
+	@JoinColumn(name= "proId", nullable=false)
+	private List<Products> productList;
 	
 	@Column(name= "qty")
 	int qty;
@@ -65,15 +72,34 @@ public class Order {
 
 
 
-	public long getProducts_id() {
-		return products_id;
-	}
-	public void setProducts_id(long products_id) {
-		this.products_id = products_id;
-	}
+//	public long getProducts_id() {
+//		return product_id;
+//	}
+//	public void setProducts_id(long product_id) {
+//		this.product_id = product_id;
+//	}
+	
+	
+	
 	public int getQty() {
 		return qty;
 	}
+	
+
+
+
+	public List<Products> getProductList() {
+		return productList;
+	}
+
+
+
+	public void setProductList(List<Products> productList) {
+		this.productList = productList;
+	}
+
+
+
 	public void setQty(int qty) {
 		this.qty = qty;
 	}

@@ -11,5 +11,5 @@ import com.revature.model.Products;
 public interface ProductRepository extends JpaRepository<Products, Long>{
 	@Query("select pro from products pro where pro.category_id=cat_id")
 	List<Products> getByCategoryId(@Param("cat_id")String cat_id);
-
+	List<Products> findAll();
 }
